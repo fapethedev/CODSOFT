@@ -1,4 +1,4 @@
-package com.fapethedev.codsoft.java.quiztimergame;
+package com.fapethedev.codsoft.java.game;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.fapethedev.codsoft.java.quiztimergame;
+package com.fapethedev.codsoft.java.game;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
