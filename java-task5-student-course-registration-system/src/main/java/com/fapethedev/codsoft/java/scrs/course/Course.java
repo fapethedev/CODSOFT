@@ -28,6 +28,16 @@ public class Course
     private int capacity;
     private String schedule;
 
+    @Override
+    public String toString() {
+        return "Course{" + "courseCode='" + courseCode + '\'' +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", capacity=" + capacity +
+                ", schedule='" + schedule + '\'' +
+                '}';
+    }
+
     @ManyToMany(mappedBy = "courses", fetch = FetchType.LAZY)
     private Set<Student> students = new HashSet<>();
 }
