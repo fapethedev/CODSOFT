@@ -14,3 +14,20 @@ INSERT INTO courses (course_code, title, description, capacity, schedule) VALUES
 ('AR402', 'Advanced ArangoDB Querying', 'Deep dive into ArangoDB querying with AQL (ArangoDB Query Language), indexing, and performance optimization.', 25, 'Tue-Thu 10:00-11:30 AM'),
 ('AR403', 'Data Modeling with ArangoDB', 'Learn data modeling techniques in ArangoDB, including schema design for document and graph databases.', 20, 'Wed 3:00-5:00 PM'),
 ('AR404', 'ArangoDB in Production', 'Best practices for deploying, scaling, and monitoring ArangoDB clusters in production environments.', 35, 'Fri 1:00-3:00 PM');
+
+INSERT INTO students (name) VALUES
+('Juan Carlos'),
+('Mei Ling'),
+('Olaf Svensson'),
+('Aarav Patel'),
+('Fatima Zahra'),
+('Liam O\'Connor'),
+('Yuki Tanaka'),
+('Sara Müller'),
+('Isabella Rossi'),
+('Ahmed Al-Farsi'),
+('Anna Ivanova'),
+('Kofi Mensah'),
+('Emily Nguyen'),
+('Pedro Gomez'),
+('Musa Abubakar');
