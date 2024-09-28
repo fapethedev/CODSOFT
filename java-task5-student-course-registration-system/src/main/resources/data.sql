@@ -1,3 +1,25 @@
+CREATE TABLE courses(
+    id LONG PRIMARY KEY AUTO_INCREMENT,
+    course_code VARCHAR(255) NOT NULL UNIQUE,
+    title VARCHAR(255),
+    description VARCHAR(255),
+    capacity INT,
+    schedule VARCHAR(255)
+);
+
+CREATE TABLE students(
+    id LONG PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE student_course(
+    student_id LONG NOT NULL,
+    course_id LONG NOT NULL,
+    PRIMARY KEY (student_id, course_id),
+    FOREIGN KEY (student_id) REFERENCES students (id),
+    FOREIGN KEY (course_id) REFERENCES courses (id)
+);
+
 INSERT INTO courses (course_code, title, description, capacity, schedule) VALUES
 ('CS101', 'Introduction to Process Management', 'Learn the basics of process management, including process scheduling, resource allocation, and deadlock prevention.', 30, 'Mon-Wed 10:00-11:30 AM'),
 ('CS102', 'Advanced Process Management Techniques', 'A deeper dive into multi-threading, process synchronization, and inter-process communication techniques.', 25, 'Tue-Thu 1:00-2:30 PM'),
@@ -21,7 +43,6 @@ INSERT INTO students (name) VALUES
 ('Olaf Svensson'),
 ('Aarav Patel'),
 ('Fatima Zahra'),
-('Liam O\'Connor'),
 ('Yuki Tanaka'),
 ('Sara Müller'),
 ('Isabella Rossi'),
