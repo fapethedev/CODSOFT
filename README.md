@@ -17,9 +17,9 @@ For the Java programming internship program there is a need of successfully
 accomplished at least three tasks to receive a certification grade.
 
 The accomplished tasks are:
-- Task 1: Number Game
-- Task 4: Quiz Application with Timer
-- Task 5: Student Course Registration System
+- Task 1: [Number Game](java-task1-number-game/README.md)
+- Task 4: [Quiz Application with Timer](java-task4-quiz-application-with-timer-game/README.md)
+- Task 5: [Student Course Registration System](java-task5-student-course-registration-system/README.md)
 
 ### Web Development Internship
 For the Web Development internship program there is a need of successfully 
