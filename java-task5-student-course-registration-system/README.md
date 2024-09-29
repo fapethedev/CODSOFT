@@ -16,6 +16,7 @@ options.
 1. Java 21 or more
 2. SpringBoot 3.3.x
 3. Maven 3.9.x
+4. H2 Database with prepared data in [data.sql](src/main/resources/data.sql)
 
 ## How to Run this application
 Before running this project make sur that you have java
