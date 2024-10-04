@@ -3,9 +3,8 @@
 import {useState} from "react";
 
 import Link from "next/link";
-import Image from "next/image";
-import logo from "../../../../public/logo.png";
 import ComingSoonDialog from "@/app/components/ui/coming-soon-dialog";
+import Logo from "@/app/components/ui/logo";
 
 export default function Page() {
   const [open, setOpen] = useState(false)
@@ -13,11 +12,7 @@ export default function Page() {
   return (
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <div className="flex justify-center items-center">
-            <Link href="/">
-              <Image className="h-16 w-auto mx-auto" src={logo} alt="logo"/>
-            </Link>
-          </div>
+          <Logo size="h-16"/>
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Sign in to your account
           </h2>
