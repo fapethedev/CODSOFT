@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         },
         {
             rel: 'apple-touch-icon',
-            url: 'apple-touch-icon.png',
+            url: 'apple-icon.png',
         }
     ]
 };
