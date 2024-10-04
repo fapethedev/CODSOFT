@@ -1,4 +1,8 @@
 import type { Config } from "tailwindcss";
+import tailwindcss_animate from "tailwindcss-animate";
+import aspectRatio from "@tailwindcss/aspect-ratio";
+
+import forms from "@tailwindcss/forms";
 
 const config: Config = {
     darkMode: ["class"],
@@ -55,9 +59,14 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		gridTemplateRows: {
+          '[auto,auto,1fr]': 'auto auto 1fr',
+        }
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+	  tailwindcss_animate, forms, aspectRatio
+  ],
 };
 export default config;
