@@ -1,5 +1,10 @@
 import Link from "next/link";
 import Logo from "@/app/components/ui/logo";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: 'Register',
+};
 
 export default function Page() {
   return (
