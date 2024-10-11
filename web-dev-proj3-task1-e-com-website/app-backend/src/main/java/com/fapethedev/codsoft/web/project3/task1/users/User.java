@@ -3,6 +3,7 @@ package com.fapethedev.codsoft.web.project3.task1.users;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -13,6 +14,7 @@ import java.util.Collection;
 import java.util.stream.Stream;
 
 @Entity
+@Table(name = "clients")
 @NoArgsConstructor
 @AllArgsConstructor
 public class User implements UserDetails {
