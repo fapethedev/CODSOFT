@@ -1,9 +1,6 @@
 package com.fapethedev.codsoft.web.project3.task1.users;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -19,6 +16,7 @@ import java.util.stream.Stream;
 @AllArgsConstructor
 public class User implements UserDetails {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @Column(name = "username", unique = true, nullable = false)
     String username;
