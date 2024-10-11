@@ -1,5 +1,6 @@
 package com.fapethedev.codsoft.web.project3.task1.products;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,7 @@ public interface IProductService
 
     List<Product> searchProducts(String name);
 
-    List<Product> searchProducts(Pageable pageable);
+    Page<Product> searchProducts(Pageable pageable);
     
-    List<Product> searchProducts(String name, Pageable pageable);
+    Page<Product> searchProducts(String name, Pageable pageable);
 }
