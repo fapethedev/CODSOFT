@@ -18,7 +18,8 @@ public class ProductController {
 
     @GetMapping(path = "/search", params = {"name", "page"})
     public ResponseEntity<Object> searchProduct(
-            @RequestParam String productName, @RequestParam Pageable pageable) {
+            @RequestParam(name = "name", required = false) String productName,
+            @RequestParam(name = "page", required = false) Pageable pageable) {
         Object response;
 
         if (pageable == null && productName.isEmpty())
