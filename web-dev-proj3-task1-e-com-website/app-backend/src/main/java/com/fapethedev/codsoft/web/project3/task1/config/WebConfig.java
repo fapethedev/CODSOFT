@@ -9,13 +9,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
 
     @Value("${cors.origins}")
-    private String [] origins;
-    @Value("${cors.path-pattern}")
-    private String pathPattern;
+    private String origins;
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping(pathPattern)
+        System.err.println(origins);
+        registry.addMapping("/**")
                 .allowedOrigins(origins)
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*")
