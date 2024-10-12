@@ -2,12 +2,12 @@ package com.fapethedev.codsoft.web.project3.task1.products;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "cors.origins")
 @RequiredArgsConstructor
 @RequestMapping(path = {"/sizes", "/sizes/"})
 @RestController

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "cors.origins")
 @RequiredArgsConstructor
 @RequestMapping(path = {"/colors", "/colors/"})
 @RestController

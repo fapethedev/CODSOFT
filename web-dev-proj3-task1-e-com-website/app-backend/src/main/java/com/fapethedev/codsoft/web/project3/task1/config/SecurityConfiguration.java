@@ -45,6 +45,7 @@ public class SecurityConfiguration
             )
         )
         .csrf(AbstractHttpConfigurer::disable)
+        .cors(Customizer.withDefaults())
         .rememberMe(remember -> remember.useSecureCookie(true));
 
         return http.build();
