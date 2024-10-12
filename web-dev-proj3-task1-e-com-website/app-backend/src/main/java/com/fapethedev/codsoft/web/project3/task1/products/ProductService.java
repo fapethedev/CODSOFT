@@ -24,18 +24,18 @@ public class ProductService implements IProductService
     }
 
     @Override
-    public Product save(Product color) {
-        return productRepository.save(color);
+    public Product save(Product product) {
+        return productRepository.save(product);
     }
 
     @Override
-    public Product update(Product color) {
-        return productRepository.save(color);
+    public Product update(Product product) {
+        return productRepository.save(product);
     }
 
     @Override
-    public void delete(Product color) {
-        productRepository.delete(color);
+    public void delete(Product product) {
+        productRepository.delete(product);
     }
 
     @Override
