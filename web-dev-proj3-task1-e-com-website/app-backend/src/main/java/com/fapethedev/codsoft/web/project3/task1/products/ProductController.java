@@ -1,5 +1,6 @@
 package com.fapethedev.codsoft.web.project3.task1.products;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -60,7 +61,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<Product>save(@RequestBody Product request)
+    public ResponseEntity<Product>save(@RequestBody @Valid Product request)
     {
         var product = productService.save(request);
 
@@ -68,7 +69,7 @@ public class ProductController {
     }
 
     @PatchMapping
-    public ResponseEntity<Product>update(@RequestBody Product request)
+    public ResponseEntity<Product>update(@RequestBody @Valid Product request)
     {
         var product = productService.update(request);
 
@@ -76,7 +77,7 @@ public class ProductController {
     }
 
     @DeleteMapping
-    public ResponseEntity<Product>delete(@RequestBody Product product)
+    public ResponseEntity<Product>delete(@RequestBody @Valid Product product)
     {
         productService.delete(product);
 

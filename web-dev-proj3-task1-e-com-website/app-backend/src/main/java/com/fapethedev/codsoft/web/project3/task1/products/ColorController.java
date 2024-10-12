@@ -1,5 +1,6 @@
 package com.fapethedev.codsoft.web.project3.task1.products;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +33,7 @@ public class ColorController {
     }
 
     @PostMapping
-    public ResponseEntity<Color>save(@RequestBody Color request)
+    public ResponseEntity<Color>save(@RequestBody @Valid Color request)
     {
         var color = colorService.save(request);
 
@@ -40,7 +41,7 @@ public class ColorController {
     }
 
     @PatchMapping
-    public ResponseEntity<Color>update(@RequestBody Color request)
+    public ResponseEntity<Color>update(@RequestBody @Valid Color request)
     {
         var color = colorService.update(request);
 
@@ -48,7 +49,7 @@ public class ColorController {
     }
 
     @DeleteMapping
-    public ResponseEntity<Color>delete(@RequestBody Color color)
+    public ResponseEntity<Color>delete(@RequestBody @Valid Color color)
     {
         colorService.delete(color);
 

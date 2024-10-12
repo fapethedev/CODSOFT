@@ -1,5 +1,6 @@
 package com.fapethedev.codsoft.web.project3.task1.products;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +33,7 @@ public class SizeController {
     }
 
     @PostMapping
-    public ResponseEntity<Size>save(@RequestBody Size request)
+    public ResponseEntity<Size>save(@RequestBody @Valid Size request)
     {
         var size = sizeService.save(request);
 
@@ -40,7 +41,7 @@ public class SizeController {
     }
 
     @PatchMapping
-    public ResponseEntity<Size>update(@RequestBody Size request)
+    public ResponseEntity<Size>update(@RequestBody @Valid Size request)
     {
         var size = sizeService.update(request);
 
@@ -48,7 +49,7 @@ public class SizeController {
     }
 
     @DeleteMapping
-    public ResponseEntity<Size>delete(@RequestBody Size size)
+    public ResponseEntity<Size>delete(@RequestBody @Valid Size size)
     {
         sizeService.delete(size);
 
